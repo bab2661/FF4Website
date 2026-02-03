@@ -1,0 +1,186 @@
+html {
+  font-family: "Times New Roman", Times, serif;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main {
+  flex: 1;
+  text-align: center;
+  margin: 0 400px 0 400px;
+}
+
+header {
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  background-image: linear-gradient(
+    to top,
+    hsl(28, 100%, 80%),
+    hsl(28, 100%, 90%)
+  );
+  border-bottom: 15px solid hsl(30, 56%, 70%);
+  box-shadow: 0px 6px rgba(0, 0, 0, 0.123);
+  padding: 5px;
+}
+
+footer {
+  justify-content: center;
+  display: flex;
+  background-image: linear-gradient(
+    to top,
+    hsl(28, 100%, 80%),
+    hsl(28, 100%, 90%)
+  );
+  border-top: 15px solid hsl(30, 56%, 70%);
+  box-shadow: 0px 6px rgba(0, 0, 0, 0.123);
+}
+
+header img {
+  width: 8%;
+  min-width: 60px;
+  max-width: 120px;
+}
+
+div {
+  padding: 10px;
+  background-color: grey;
+  border-radius: 35px;
+  transition: all 0.3s ease;
+}
+
+a {
+  color: white;
+  font-size: 30px;
+  padding: 20px;
+  text-decoration: none;
+}
+
+main div:hover {
+  background-color: rgba(0, 0, 0, 0.841);
+  transform: scale(1.1);
+}
+
+.ticker {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker p {
+  font-size: 1.4rem;
+}
+
+.ticker-track {
+  display: inline-flex;
+  gap: 3rem;
+  animation: ticker-scroll 40s linear infinite;
+}
+
+.ticker p {
+  font-weight: 500;
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+section div {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  main {
+    margin: 0 10px 0 10px;
+    padding: 0 10px;
+  }
+
+  a {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  div {
+    padding: 8px;
+  }
+
+  header {
+    gap: 15px;
+  }
+
+  .ticker-track {
+    gap: 2rem;
+    animation: ticker-scroll 50s linear infinite;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    margin: 0 5px 0 5px;
+    padding: 0 5px;
+  }
+
+  a {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  div {
+    padding: 5px;
+  }
+
+  header {
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  header img {
+    width: 30%;
+  }
+
+  .ticker-track {
+    gap: 1rem;
+    animation: ticker-scroll 60s linear infinite;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  section img {
+    height: 40px;
+  }
+}
+
+section img {
+  height: 50px;
+  opacity: 0.5;
+}
+
+section a {
+  height: 50px;
+  opacity: 0.5;
+  margin: 0;
+  padding: 0;
+}
