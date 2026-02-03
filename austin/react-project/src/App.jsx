@@ -26,7 +26,7 @@ function App() {
           count is {count}
         </button>
         <p>
-          Edit <code>src/App.jsx</code> and save to test Jeffy Nuts Balls
+          Edit <code>src/App.jsx</code> and save to test something idk.
         </p>
       </div>
       <p className="read-the-docs">
